@@ -1,0 +1,6 @@
+export PATH=/marconi_work/FUA33_ELM-UK/spamela/openMC/openmc/build/bin/:$PATH
+export OPENMC_CROSS_SECTIONS=/marconi_work/FUA33_ELM-UK/spamela/openMC/nndc_hdf5/cross_sections.xml
+module purge ; module load profile/advanced cmake gnu/6.1.0 zlib/1.2.8--gnu--6.1.0 szip/2.1--gnu--6.1.0 openmpi/3.0.0--gnu--6.1.0 python hdf5/1.8.17--gnu--6.1.0 blas/3.6.0--gnu--6.1.0 lapack/3.6.1--gnu--6.1.0
+
+export PS1='\[\e[1;31m\][ spamela0@login.marconi.cineca.it:\w ]\[\e[0;37m\] '
+
