@@ -279,6 +279,12 @@ if $do_openmc_work ; then
   fi
   
   #bash ./openmc/tools/ci/download-xs.sh
+  cat ./openmc/tools/ci/download-xs.sh | grep "anl.box.com" | head -n 1 | sed "s/wget -q -O -/wget/g" | sed "s/| tar -C \$HOME -xJ/ /g" > get_nndc_hdf5
+  . ./get_nndc_hdf5
+  ls ./*.xz > get_nndc_hdf5
+  sed -i '1s/^/tar -xvf /' get_nndc_hdf5
+  . ./get_nndc_hdf5
+  
   
   HOME=`echo $HOME_SAVE`
   export OPENMC_CROSS_SECTIONS=$HOME/nndc_hdf5/cross_sections.xml
