@@ -273,7 +273,7 @@ fi
 # And the openMC workshop from J.Shimwell
 if $do_openmc_work ; then
   if [ ! -d "openmc_workshop" ] ; then
-    git clone https://github.com/Shimwell/openmc_workshop.git
+    git clone https://github.com/ukaea/openmc_workshop
   else
     cd openmc_workshop && git pull && cd $HOME
   fi
